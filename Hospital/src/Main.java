@@ -7,6 +7,7 @@ import pessoa.paciente.Paciente;
 import pessoa.tipoPessoaEnum.TipoPessoaEnum;
 import sala.Sala;
 import sala.atendimento.Atendimento;
+import sala.espera.SalaEspera;
 import sala.tipoSalaEnum.TipoSalaEnum;
 
 import java.util.Arrays;
@@ -32,6 +33,8 @@ public class Main {
         nome = scanner.nextLine();
         Paciente paciente = new Paciente("A", nome, TipoPessoaEnum.PACIENTE);
         paciente.setSintomas(Arrays.asList("Dor de cabeça", "Dor de barriga"));
+        SalaEspera salaEspera = new SalaEspera();
+        salaEspera.acrescentaListaEspera(paciente);
         return paciente;
     }
 
